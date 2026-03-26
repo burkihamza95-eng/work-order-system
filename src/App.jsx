@@ -1,3 +1,11 @@
+import { createClient } from '@supabase/supabase-js';
+
+const SUPABASE_URL = "https://zfinjesxvxevlybipuaa.supabase.co";
+const SUPABASE_KEY = "sb_publishable_y_j6e1jD9nyc5pV-rTBOkg_WkHm29Kj";
+
+const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+
+
 import { useState, useReducer, useEffect, useRef } from "react";
 
 // ─── GLOBAL STYLES ──────────────────────────────────────────────────────────

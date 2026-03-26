@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { createClient } from '@supabase/supabase-js';
 
 // ─── SUPABASE CONFIG ─────────────────────────────────────────────────────────
 // Replace these two values with your own from Supabase dashboard
 const SUPABASE_URL = "zfinjesxvxevlybipuaa";
 const SUPABASE_KEY = "sb_publishable_y_j6e1jD9nyc5pV-rTBOkg_WkHm29Kj";
+const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 const sb = async (path, options = {}) => {
   const res = await fetch(`${SUPABASE_URL}/rest/v1/${path}`, {
